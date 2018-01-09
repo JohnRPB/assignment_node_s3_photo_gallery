@@ -88,7 +88,10 @@ app.use(morganToolkit());
 // Routes
 // ----------------------------------------
 const photos = require('./routers/photos.js');
+const users = require('./routers/users');
 
+
+app.use('/users', users);
 app.use('/photos', photos);
 
 app.use('/', (req, res) => {
